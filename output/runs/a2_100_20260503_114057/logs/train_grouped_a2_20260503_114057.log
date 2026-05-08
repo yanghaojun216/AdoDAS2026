@@ -1,0 +1,102 @@
+2026-05-03 11:40:57 [INFO] Logging to /data1/yhj/train/output/runs/a2__grouped__mtcn__a-base-none__a-ssl-none__v-base-none__v-ssl-none__mask-or__argmaxdecode_thrcalib__seed42__20260503_114057/logs/train_grouped_a2_20260503_114057.log
+2026-05-03 11:40:57 [INFO] Device: cuda
+2026-05-03 11:40:57 [INFO] Task: a2
+2026-05-03 11:40:57 [INFO] Run name: a2__grouped__mtcn__a-base-none__a-ssl-none__v-base-none__v-ssl-none__mask-or__argmaxdecode_thrcalib__seed42__20260503_114057
+2026-05-03 11:40:57 [INFO] Config: {'task': 'a2'}
+2026-05-03 11:40:57 [INFO] Mask policy: and_core
+2026-05-03 11:40:58 [INFO] Train: 4200 participants, Val: 600 participants
+2026-05-03 11:40:58 [INFO] Preloading data into RAM ...
+2026-05-03 11:40:58 [INFO] 未找到缓存，开始首次数据组装（将耗时较长），结果将自动保存至: /data1/yhj/AdoDAS2026/data_cache/grouped_a2_train_cache.pt
+2026-05-03 11:53:21 [INFO] Preloaded 4200/4200 participants (17.4 GB in RAM)
+2026-05-03 11:53:21 [INFO] 正在将内存数据序列化至硬盘，请勿中断程序...
+2026-05-03 11:53:41 [INFO] 缓存保存成功！下次运行将直接秒进！
+2026-05-03 11:53:42 [INFO] 未找到缓存，开始首次数据组装（将耗时较长），结果将自动保存至: /data1/yhj/AdoDAS2026/data_cache/grouped_a2_val_cache.pt
+2026-05-03 11:54:21 [INFO] Preloaded 600/600 participants (2.5 GB in RAM)
+2026-05-03 11:54:21 [INFO] 正在将内存数据序列化至硬盘，请勿中断程序...
+2026-05-03 11:54:23 [INFO] 缓存保存成功！下次运行将直接秒进！
+2026-05-03 11:54:23 [INFO] Preload done: 17.4G + 2.5G = 19.8G, took 13m 25s
+2026-05-03 11:54:24 [INFO] batch_size=32, num_workers=0
+2026-05-03 11:54:24 [INFO] Model params: 5,538,583
+2026-05-03 11:54:25 [INFO] AMP enabled (BF16)
+2026-05-03 11:54:25 [INFO] A2 pos_weight shape: torch.Size([1, 21, 3])
+2026-05-03 11:54:25 [INFO] Scheduler: warmup=3 -> cosine, total=20
+2026-05-03 11:54:26 [INFO] Grad clip: 1.0
+2026-05-03 11:54:26 [INFO] Session loss weight: 0.5
+2026-05-03 11:54:26 [INFO] Session type loss weight: 0.15
+2026-05-03 11:54:26 [INFO] EarlyStopping: patience=8, metric=val_loss, mode=min
+2026-05-03 11:54:27 [INFO] Label smoothing: 0.05
+2026-05-03 11:54:27 [INFO] Feature noise std: 0.01
+2026-05-03 11:54:27 [INFO] Session drop prob: 0.1
+2026-05-03 11:54:27 [INFO] ==========================================================================================
+2026-05-03 11:54:28 [INFO]   Epoch  |    LR     | Train Loss | Val Loss | mean QWK | mean MAE | Time
+2026-05-03 11:54:28 [INFO] ==========================================================================================
+2026-05-03 12:06:31 [INFO]     pred dist: 0=0.0% 1=100.0% 2=0.0% 3=0.0%
+2026-05-03 12:06:31 [INFO]     GT   dist: 0=69.4% 1=23.4% 2=4.7% 3=2.5%
+2026-05-03 12:06:31 [INFO]     top3: d01=0.000 d02=0.000 d03=0.000  |  bot3: d19=0.000 d20=0.000 d21=0.000
+2026-05-03 12:06:31 [INFO]     1/ 20 | 3.40e-04 |   1.3944   |  0.6950  |  0.0000  |  0.7909  | 12m 03s ETA 3h 49m 10s VRAM 5.3G *
+2026-05-03 12:06:31 [INFO]   >>> New best QWK=0.0000 saved at epoch 1.
+2026-05-03 12:18:30 [INFO]     pred dist: 0=0.0% 1=100.0% 2=0.0% 3=0.0%
+2026-05-03 12:18:30 [INFO]     GT   dist: 0=69.4% 1=23.4% 2=4.7% 3=2.5%
+2026-05-03 12:18:30 [INFO]     top3: d01=0.000 d02=0.000 d03=0.000  |  bot3: d19=0.000 d20=0.000 d21=0.000
+2026-05-03 12:18:30 [INFO]     2/ 20 | 6.70e-04 |   1.2574   |  0.6334  |  0.0000  |  0.7909  | 11m 58s ETA 3h 36m 24s VRAM 5.3G
+2026-05-03 12:30:29 [INFO]     pred dist: 0=0.0% 1=90.0% 2=10.0% 3=0.0%
+2026-05-03 12:30:29 [INFO]     GT   dist: 0=69.4% 1=23.4% 2=4.7% 3=2.5%
+2026-05-03 12:30:30 [INFO]     top3: d08=0.145 d01=0.141 d02=0.128  |  bot3: d20=0.000 d21=0.000 d18=-0.002
+2026-05-03 12:30:30 [INFO]     3/ 20 | 1.00e-03 |   1.2135   |  0.6560  |  0.0403  |  0.8578  | 11m 59s ETA 3h 24m 12s VRAM 5.3G *
+2026-05-03 12:30:30 [INFO]   >>> New best QWK=0.0403 saved at epoch 3.
+2026-05-03 12:42:30 [INFO]     pred dist: 0=12.4% 1=87.6% 2=0.0% 3=0.0%
+2026-05-03 12:42:30 [INFO]     GT   dist: 0=69.4% 1=23.4% 2=4.7% 3=2.5%
+2026-05-03 12:42:30 [INFO]     top3: d08=0.187 d01=0.157 d15=0.144  |  bot3: d03=0.021 d14=0.000 d20=0.000
+2026-05-03 12:42:30 [INFO]     4/ 20 | 9.91e-04 |   1.1344   |  0.6049  |  0.0738  |  0.6952  | 11m 59s ETA 3h 12m 10s VRAM 5.3G *
+2026-05-03 12:42:30 [INFO]   >>> New best QWK=0.0738 saved at epoch 4.
+2026-05-03 12:54:30 [INFO]     pred dist: 0=0.3% 1=93.3% 2=6.5% 3=0.0%
+2026-05-03 12:54:30 [INFO]     GT   dist: 0=69.4% 1=23.4% 2=4.7% 3=2.5%
+2026-05-03 12:54:30 [INFO]     top3: d05=0.138 d02=0.129 d08=0.109  |  bot3: d14=0.000 d17=0.000 d20=0.000
+2026-05-03 12:54:30 [INFO]     5/ 20 | 9.66e-04 |   1.0980   |  0.6107  |  0.0456  |  0.8318  | 11m 59s ETA 3h 00m 08s VRAM 5.3G
+2026-05-03 13:06:30 [INFO]     pred dist: 0=42.8% 1=57.2% 2=0.0% 3=0.0%
+2026-05-03 13:06:30 [INFO]     GT   dist: 0=69.4% 1=23.4% 2=4.7% 3=2.5%
+2026-05-03 13:06:30 [INFO]     top3: d01=0.279 d08=0.250 d13=0.218  |  bot3: d20=0.119 d04=0.113 d14=0.110
+2026-05-03 13:06:30 [INFO]     6/ 20 | 9.25e-04 |   1.0906   |  0.6103  |  0.1767  |  0.5213  | 11m 59s ETA 2h 48m 06s VRAM 5.3G *
+2026-05-03 13:06:30 [INFO]   >>> New best QWK=0.1767 saved at epoch 6.
+2026-05-03 13:18:31 [INFO]     pred dist: 0=5.1% 1=94.9% 2=0.0% 3=0.0%
+2026-05-03 13:18:31 [INFO]     GT   dist: 0=69.4% 1=23.4% 2=4.7% 3=2.5%
+2026-05-03 13:18:31 [INFO]     top3: d15=0.072 d21=0.066 d11=0.060  |  bot3: d08=0.002 d03=0.002 d14=0.000
+2026-05-03 13:18:31 [INFO]     7/ 20 | 8.70e-04 |   1.0860   |  0.6084  |  0.0318  |  0.7463  | 12m 00s ETA 2h 36m 06s VRAM 5.3G
+2026-05-03 13:30:30 [INFO]     pred dist: 0=1.2% 1=98.8% 2=0.0% 3=0.0%
+2026-05-03 13:30:30 [INFO]     GT   dist: 0=69.4% 1=23.4% 2=4.7% 3=2.5%
+2026-05-03 13:30:30 [INFO]     top3: d17=0.026 d21=0.024 d04=0.019  |  bot3: d07=0.001 d14=0.000 d12=-0.001
+2026-05-03 13:30:30 [INFO]     8/ 20 | 8.02e-04 |   1.0803   |  0.6150  |  0.0077  |  0.7800  | 11m 59s ETA 2h 24m 04s VRAM 5.3G
+2026-05-03 13:42:31 [INFO]     pred dist: 0=0.6% 1=99.4% 2=0.0% 3=0.0%
+2026-05-03 13:42:31 [INFO]     GT   dist: 0=69.4% 1=23.4% 2=4.7% 3=2.5%
+2026-05-03 13:42:31 [INFO]     top3: d19=0.024 d12=0.018 d05=0.009  |  bot3: d07=0.001 d03=0.000 d14=0.000
+2026-05-03 13:42:31 [INFO]     9/ 20 | 7.23e-04 |   1.0806   |  0.6197  |  0.0050  |  0.7851  | 12m 00s ETA 2h 12m 04s VRAM 5.3G
+2026-05-03 13:54:30 [INFO]     pred dist: 0=0.0% 1=99.8% 2=0.2% 3=0.0%
+2026-05-03 13:54:30 [INFO]     GT   dist: 0=69.4% 1=23.4% 2=4.7% 3=2.5%
+2026-05-03 13:54:30 [INFO]     top3: d05=0.039 d12=0.001 d01=0.000  |  bot3: d19=0.000 d20=0.000 d21=0.000
+2026-05-03 13:54:31 [INFO]    10/ 20 | 6.37e-04 |   1.0731   |  0.6364  |  0.0019  |  0.7921  | 11m 59s ETA 2h 00m 03s VRAM 5.3G
+2026-05-03 14:06:30 [INFO]     pred dist: 0=0.0% 1=99.5% 2=0.5% 3=0.0%
+2026-05-03 14:06:30 [INFO]     GT   dist: 0=69.4% 1=23.4% 2=4.7% 3=2.5%
+2026-05-03 14:06:30 [INFO]     top3: d09=0.055 d01=0.000 d02=0.000  |  bot3: d19=0.000 d20=0.000 d21=0.000
+2026-05-03 14:06:30 [INFO]    11/ 20 | 5.47e-04 |   1.0694   |  0.6323  |  0.0026  |  0.7938  | 11m 59s ETA 1h 48m 01s VRAM 5.3G
+2026-05-03 14:18:29 [INFO]     pred dist: 0=9.8% 1=83.1% 2=7.1% 3=0.0%
+2026-05-03 14:18:29 [INFO]     GT   dist: 0=69.4% 1=23.4% 2=4.7% 3=2.5%
+2026-05-03 14:18:29 [INFO]     top3: d08=0.189 d01=0.154 d02=0.144  |  bot3: d18=0.041 d03=0.023 d14=0.000
+2026-05-03 14:18:29 [INFO]    12/ 20 | 4.54e-04 |   1.0611   |  0.6111  |  0.0993  |  0.7507  | 11m 59s ETA 1h 36m 01s VRAM 5.3G
+2026-05-03 14:18:29 [INFO]   EarlyStopping triggered at epoch 12 (patience=8, metric=val_loss)
+2026-05-03 14:18:29 [INFO] ==========================================================================================
+2026-05-03 14:18:29 [INFO] Training complete. Best QWK=0.1767, time=2h 24m 01s
+2026-05-03 14:18:29 [INFO] Loading best checkpoint for submission generation ...
+2026-05-03 14:18:29 [INFO] Submission level: participant
+2026-05-03 14:18:29 [INFO] Decode method: expectation
+2026-05-03 14:18:29 [INFO] Calibrating and selecting A2 decode strategy on val ...
+2026-05-03 14:19:57 [INFO]   A2 decode comparison on val:
+2026-05-03 14:19:57 [INFO]     argmax                 QWK=0.0116 MAE=0.3984 | 0=98.2% 1=1.8% 2=0.0% 3=0.0%
+2026-05-03 14:19:57 [INFO]     monotonic              QWK=0.0000 MAE=0.4033 | 0=100.0% 1=0.0% 2=0.0% 3=0.0%
+2026-05-03 14:19:57 [INFO]     expectation            QWK=0.1767 MAE=0.5213 | 0=42.8% 1=57.2% 2=0.0% 3=0.0%
+2026-05-03 14:19:57 [INFO]     calibrated_argmax      QWK=0.2194 MAE=0.5133 | 0=60.4% 1=31.1% 2=5.9% 3=2.6%
+2026-05-03 14:19:57 [INFO]     calibrated_monotonic   QWK=0.1796 MAE=0.6875 | 0=81.8% 1=0.0% 2=0.0% 3=18.2%
+2026-05-03 14:19:57 [INFO]     calibrated_expectation QWK=0.2100 MAE=0.4525 | 0=57.1% 1=42.4% 2=0.5% 3=0.0%
+2026-05-03 14:19:57 [INFO]   Selected A2 strategy: calibrated_argmax (decode=argmax, QWK=0.2194, MAE=0.5133)
+2026-05-03 14:19:58 [INFO] Skipping submission generation after training; use infer.py for release inference.
+2026-05-03 14:19:58 [INFO] Run complete: a2__grouped__mtcn__a-base-none__a-ssl-none__v-base-none__v-ssl-none__mask-or__argmaxdecode_thrcalib__seed42__20260503_114057
+2026-05-03 14:19:58 [INFO] Output dir: /data1/yhj/train/output/runs/a2__grouped__mtcn__a-base-none__a-ssl-none__v-base-none__v-ssl-none__mask-or__argmaxdecode_thrcalib__seed42__20260503_114057

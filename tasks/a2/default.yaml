@@ -1,0 +1,57 @@
+# ====== 1. 修改这里的核心路径 ======
+feature_root: /data1/yhj/Datasets/AdoDAS
+manifest_dir: /data1/yhj/Datasets/AdoDAS
+output_dir: /data1/yhj/AdoDAS2026/output/a2
+
+# ====== 2. 保持官方优秀的模型配置 ======
+feature_selection:
+  audio_features:
+    - mel_mfcc
+    - vad
+    - egemaps
+    - ssl_embed
+  video_features:
+    - headpose_geom
+    - face_behavior
+    - qc_stats
+    - vad_agg
+    - vision_ssl_embed
+  audio_ssl_model_tag: chinese-hubert-large
+  video_ssl_model_tag: vit-mae-base
+
+mask_policy: and_core
+core_audio: [mel_mfcc, ssl_embed]
+core_video: [vision_ssl_embed, qc_stats]
+
+d_adapter: 64
+d_model: 256
+tcn_layers: 6
+tcn_kernel_size: 3
+asp_alpha: 0.5
+asp_beta: 0.5
+dropout: 0.2
+d_shared: 256
+
+aggregator: mlp
+use_coral: true # 关键点：开启序数回归
+batch_size: 16   # 原来是64(要去common/runner.py里改，第804行)
+grid_step_ms: 400.0    # 原来是40，可改成100或200，表示每秒切帧数，数值越大占用内存越小（要去common/data/dataset.py里改，第40和73行）
+lr: 0.001
+weight_decay: 0.01
+warmup_epochs: 3
+epochs: 40
+seed: 42
+num_workers: 8
+amp: true
+preload: true
+grad_clip: 1.0
+use_pos_weight: true
+patience: 8
+session_loss_weight: 0.5
+session_type_loss_weight: 0.15
+submission_level: participant
+decode_method: auto
+label_smoothing: 0.05
+feature_noise_std: 0.01
+session_drop_prob: 0.1
+early_stop_metric: val_loss

@@ -1,0 +1,5 @@
+2026-05-04 05:12:18 [INFO] Logging to /data1/yhj/AdoDAS2026/output/runs/a2_100_20260503_114057/logs/train_grouped_infer_a2_20260504_051218.log
+2026-05-04 05:12:18 [INFO] 未找到缓存，开始首次数据组装（将耗时较长），结果将自动保存至: /data1/yhj/AdoDAS2026/data_cache/grouped_a2_val_cache.pt
+2026-05-04 05:12:50 [INFO] Preloaded 600/600 participants (0.6 GB in RAM)
+2026-05-04 05:12:50 [INFO] 正在将内存数据序列化至硬盘，请勿中断程序...
+2026-05-04 05:12:52 [INFO] 缓存保存成功！下次运行将直接秒进！

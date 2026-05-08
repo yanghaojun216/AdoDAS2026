@@ -1,0 +1,34 @@
+{
+  "run_name": "a2__grouped__mtcn__a-base-none__a-ssl-none__v-base-none__v-ssl-none__mask-or__argmaxdecode_thrcalib__seed42__20260503_020936",
+  "task": "a2",
+  "start_time": "2026-05-03T02:09:36.286878",
+  "end_time": "2026-05-03T06:17:30.182945",
+  "git_commit": "unknown",
+  "command_line": "train.py --task a2 --config default.yaml",
+  "full_config": {
+    "task": "a2"
+  },
+  "audio_ssl_tag": "",
+  "video_ssl_tag": "",
+  "feature_combination": {
+    "audio_features": [],
+    "video_features": [],
+    "audio_ssl_model_tag": "",
+    "video_ssl_model_tag": ""
+  },
+  "best_epoch": 6,
+  "best_metrics": {
+    "loss": 0.6259793733295641,
+    "mean_qwk": 0.17905941505756115,
+    "mean_mae": 0.4816666666666666,
+    "primary_metric": 0.17905941505756115,
+    "selected_decode_method": null
+  },
+  "status": "completed",
+  "final_selected_strategy": "calibrated_expectation",
+  "final_selected_metrics": {
+    "mean_qwk": 0.2075517008568895,
+    "mean_mae": 0.468015873015873,
+    "decode_method": "expectation"
+  }
+}
