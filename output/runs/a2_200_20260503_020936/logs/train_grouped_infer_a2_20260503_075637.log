@@ -1,3 +1,0 @@
-2026-05-03 07:56:37 [INFO] Logging to /data1/yhj/train/output/runs/a2__grouped__mtcn__a-base-none__a-ssl-none__v-base-none__v-ssl-none__mask-or__argmaxdecode_thrcalib__seed42__20260503_020936/logs/train_grouped_infer_a2_20260503_075637.log
-2026-05-03 07:56:37 [INFO] 🎉 发现本地缓存文件: /data1/yhj/AdoDAS2026/data_cache/grouped_a2_val_cache.pt，正在极速加载入内存...
-2026-05-03 07:56:39 [INFO] ✅ 缓存加载完成! val 数据已就绪 (1.2 GB in RAM)
